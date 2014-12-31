@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount" modelAttribute="userAccount" path="/useraccounts" versionField="Version" z="F1xttaTAPw+4L+qr7wCVYm27ySc=">
+        <field:input field="userName" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_userName" required="true" z="3P3GKFIt6y9IQgy/wt8wW2AET/E="/>
+        <field:input field="password" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_password" required="true" z="Wtnzj6a0huSNfR7GczP4kcJyNh4="/>
+        <field:input field="firstName" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_firstName" required="true" z="dn9c9aIaXlPoqMkCH8AJBPsA7tw="/>
+        <field:input field="lastName" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_lastName" required="true" z="MDoyPF7qYVuyoLeVuJZVPiIvXqU="/>
+        <field:input field="phone" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_phone" required="true" z="y8z2MzronhJcEneHAHMXBu9wcVQ="/>
+        <field:input field="email" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_email" required="true" validationMessageCode="field_invalid_email" z="6r5XT3wpsDE7qZKJJNfrszvd93w="/>
+        <field:select field="city" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_city" itemValue="id" items="${citys}" path="/citys" required="true" z="7pDEUbvRBRbG/dEQpnKQFvrF+Xk="/>
+        <field:checkbox field="enabled" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_enabled" z="bvya4tEre+viEL77IlaGRc0YVYk="/>
+    </form:update>
+</div>

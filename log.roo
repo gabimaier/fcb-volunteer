@@ -1,0 +1,74 @@
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2014-12-31 16:59:29
+project --topLevelPackage ro.fundatiacomunitarabucuresti.volunteer
+jpa setup --provider HIBERNATE --database MYSQL --databaseName volunteer --hostName localhost --userName root --password root
+entity jpa --class ~.domain.City --table cities --testAutomatically
+field string --fieldName name --notNull
+entity jpa --class ~.domain.Skill --table skills --testAutomatically
+field string --fieldName name --notNull
+entity jpa --class ~.domain.Tag --table tags --testAutomatically
+field string --fieldName name --notNull
+entity jpa --class ~.domain.UserAccount --abstract --inheritanceType JOINED
+field string --fieldName userName --notNull --unique
+field string --fieldName password --notNull
+field string --fieldName firstName --notNull
+field string --fieldName lastName --notNull
+field string --fieldName phone --notNull
+field string --fieldName email --notNull
+field reference --fieldName city --type ~.domain.City --notNull
+field boolean --fieldName enabled --notNull
+entity jpa --class ~.domain.Organization --table organizations --extends ~.domain.UserAccount --testAutomatically
+field string --fieldName name --notNull --unique
+field string --fieldName website
+entity jpa --class ~.domain.Volunteer --table volunteers --extends ~.domain.UserAccount --testAutomatically
+field set --fieldName skills --type ~.domain.Skill
+field set --fieldName expertSkills --type ~.domain.Skill
+entity jpa --class ~.domain.Facilitator --table facilitators --extends ~.domain.UserAccount --testAutomatically
+entity jpa --class ~.domain.UserRole --table user_roles --testAutomatically
+field reference --fieldName userAccount --type ~.domain.UserAccount --notNull
+field string --fieldName roleName --notNull
+entity jpa --class ~.domain.Project --table projects --testAutomatically
+field reference --fieldName organization --type ~.domain.Organization --notNull
+field string --fieldName title --notNull --unique --sizeMax 250 --sizeMin 1
+field string --fieldName description --notNull
+field set --fieldName tags --type ~.domain.Tag
+field list --fieldName requiredSkills --type ~.domain.Skill --notNull
+field date --fieldName startDate --type java.util.Date --notNull --future
+field boolean --fieldName accepted
+field string --fieldName initialFeedback --notNull
+field string --fieldName results
+field string --fieldName progress
+field reference --fieldName city --type ~.domain.City --notNull
+entity jpa --class ~.domain.VolunteerApplication --table volunteer_applications --testAutomatically
+field boolean --fieldName accepted
+field reference --fieldName volunteer --type ~.domain.Volunteer --notNull
+field reference --fieldName project --type ~.domain.Project --notNull
+focus --class ~.domain.Project
+field set --fieldName volunteers --type ~.domain.VolunteerApplication
+// script --file newLog.roo
+perform tests
+web mvc setup
+// [failed] web mvc all --package ~.web
+// [failed] web mvc all --package ~.web
+web mvc scaffold --backingType ~.domain.Skill --class ~.web.SkillController
+web mvc scaffold --backingType ~.domain.Tag --class ~.web.TagController
+web mvc scaffold --backingType ~.domain.City --class ~.web.CityController --path cities
+// [failed] web mvc scaffold --backingType ~.domain.Volunteer --class ~.web.VolunteerController
+// [failed] web mvc scaffold --backingType ~.domain.UserAccount --class ~.web.UserAccountController --path volunteers
+web mvc scaffold --backingType ~.domain.UserAccount --class ~.web.UserAccountController
+// [failed] web mvc scaffold --backingType ~.domain.Volunteer --class ~.web.VolunteerController
+web mvc scaffold --backingType ~.domain.UserRole --class ~.web.UserRoleController
+web mvc scaffold --backingType ~.domain.Project --class ~.web.ProjectController
+web mvc scaffold --backingType ~.domain.VolunteerApplication --class ~.web.VolunteerApplicationController
+service all --interfacePackage ~.services --classPackage ~.services.impl
+web mvc scaffold --backingType ~.domain.Skill --class ~.web.SkillController
+hint web mvc update tags 
+hint web mvc update
+hint web mvc
+web mvc scaffold --backingType ~.domain.Skill --class ~.web.SkillController
+hint
+exit
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2014-12-31 18:00:42
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2014-12-31 20:00:11
+web mvc controller --class ~.web.VolunteerController --preferredMapping volunteers
+web mvc controller --class ~.web.OrganizationController --preferredMapping organizations
+web mvc controller --class ~.web.FacilitatorController --preferredMapping facilitators

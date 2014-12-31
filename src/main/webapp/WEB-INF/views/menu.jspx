@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_skill" z="Iaylqb/Nl/Uig1wNeJAoQWYI/lI=">
+            <menu:item id="i_skill_new" messageCode="global_menu_new" url="/skills?form" z="66VeXO5EeHIFheC8BPoFzxZLQZU="/>
+            <menu:item id="i_skill_list" messageCode="global_menu_list" url="/skills?page=1&amp;size=${empty param.size ? 10 : param.size}" z="RfLHgyoyE4TcMxzNLHeQJdqbP5A="/>
+        </menu:category>
+        <menu:category id="c_city" z="4hVKAkWoLVM4Da06LymSga9Sizg=">
+            <menu:item id="i_city_new" messageCode="global_menu_new" url="/cities?form" z="ALvexInNJV04umr0v6O5Lb5BiXI="/>
+            <menu:item id="i_city_list" messageCode="global_menu_list" url="/cities?page=1&amp;size=${empty param.size ? 10 : param.size}" z="eCMIDEtkupGCPUtv6TKBGfxsOaQ="/>
+        </menu:category>
+        <menu:category id="c_useraccount" z="Yb8cyPB5AwOfYXCcrEpGXNT9C+k=">
+            <menu:item id="i_useraccount_new" messageCode="global_menu_new" url="/useraccounts?form" z="dm6iErpLQmgISoPCTS3yLiH8XFA="/>
+            <menu:item id="i_useraccount_list" messageCode="global_menu_list" url="/useraccounts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="nijRCp2PPYuD2D3D7hljcdDK4vs="/>
+        </menu:category>
+        <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
+            <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
+            <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
+        </menu:category>
+        <menu:category id="c_project" z="u0PzRIwMDmEv/J6b8vbKakXGIdQ=">
+            <menu:item id="i_project_new" messageCode="global_menu_new" url="/projects?form" z="1BazRC1rLnod0a+MpP1flWTvehA="/>
+            <menu:item id="i_project_list" messageCode="global_menu_list" url="/projects?page=1&amp;size=${empty param.size ? 10 : param.size}" z="GHL05c3Rvr+eKDgRCk3Ttak0W+g="/>
+        </menu:category>
+        <menu:category id="c_volunteerapplication" z="pQAl8aJVCUxa2L4GhufE6UJxV8I=">
+            <menu:item id="i_volunteerapplication_new" messageCode="global_menu_new" url="/volunteerapplications?form" z="gnWZ2vJfXAr6NazEUE2hy32SlIc="/>
+            <menu:item id="i_volunteerapplication_list" messageCode="global_menu_list" url="/volunteerapplications?page=1&amp;size=${empty param.size ? 10 : param.size}" z="uZd2DaZLQoujRFpFTjgAStNshwo="/>
+        </menu:category>
+        <menu:category id="c_tag" z="zbrDBteXk3LlkQMQy3xXpSv2428=">
+            <menu:item id="i_tag_new" messageCode="global_menu_new" url="/tags?form" z="c2MR5d7dttBSgnPxMMH7oOEDl6Q="/>
+            <menu:item id="i_tag_list" messageCode="global_menu_list" url="/tags?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HsTcxZ80PNENgslZ1+b/pv8MYug="/>
+        </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__volunteersindex_id" messageCode="global_generic" url="/volunteers/index" z="4JwhsJuCvpFnXfb+J3zH+k0Vq20="/>
+            <menu:item id="i_controller__organizationsindex_id" messageCode="global_generic" url="/organizations/index" z="Ce70TN3qToP8gA3n7QtKcR7TWHY="/>
+            <menu:item id="i_controller__facilitatorsindex_id" messageCode="global_generic" url="/facilitators/index" z="lYD829Og2theju6aEzy2j+ear5k="/>
+        </menu:category>
+    </menu:menu>
+</div>

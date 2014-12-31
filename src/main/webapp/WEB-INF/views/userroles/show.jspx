@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ro_fundatiacomunitarabucuresti_volunteer_domain_UserRole" object="${userrole}" path="/userroles" z="R4NAfImfzdby4J+kqH8w1Fa8YaY=">
+        <field:display field="userAccount" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_UserRole_userAccount" object="${userrole}" z="4CdJ8gB6TSzGRaMM/12OpAq9Uuw="/>
+        <field:display field="roleName" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_UserRole_roleName" object="${userrole}" z="2jv0jN4Jf6ZfZGhcEWVFi+0eDtI="/>
+    </page:show>
+</div>

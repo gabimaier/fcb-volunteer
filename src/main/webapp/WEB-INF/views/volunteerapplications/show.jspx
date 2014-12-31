@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ro_fundatiacomunitarabucuresti_volunteer_domain_VolunteerApplication" object="${volunteerapplication}" path="/volunteerapplications" z="AL2WdxUqE9oDU6m40zNgJu0EEho=">
+        <field:display field="accepted" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_VolunteerApplication_accepted" object="${volunteerapplication}" z="Houkuv0tPVtR+Nqw6RKpBhvaU14="/>
+        <field:display field="volunteer" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_VolunteerApplication_volunteer" object="${volunteerapplication}" z="VTGPQvV3zp/sun6f0pRTZmMI6TA="/>
+        <field:display field="project" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_VolunteerApplication_project" object="${volunteerapplication}" z="JMpJgT1Kv/4lPI4WDtOuI3nfrs8="/>
+    </page:show>
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ro_fundatiacomunitarabucuresti_volunteer_domain_Project" modelAttribute="project" path="/projects" versionField="Version" z="C75Sw7+i8qgxN91MavZbC12AJ7I=">
+        <field:select field="organization" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_organization" itemValue="id" items="${organizations}" path="/organizations" required="true" z="5IPV4fnmM66OSVhGIWQRrL8F7Ds="/>
+        <field:textarea field="title" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_title" required="true" z="LOuinowr6lEXKXFKgoln/60n6h8="/>
+        <field:input field="description" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_description" required="true" z="pGiVAZ3TZ64FJt5CMeXn5Rm1PQI="/>
+        <field:select field="tags" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_tags" itemValue="id" items="${tags}" multiple="true" path="/tags" z="7emZMoxTyoNcRc37fWWaE3VsExw="/>
+        <field:select field="requiredSkills" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_requiredSkills" itemValue="id" items="${skills}" multiple="true" path="/skills" required="true" z="ZYf5kI24C1H0dFiqKVdyY93LPeI="/>
+        <field:datetime dateTimePattern="${project_startdate_date_format}" field="startDate" future="true" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_startDate" required="true" z="EpeXdQXbBccPncXoFm+Z0qmAG9Y="/>
+        <field:checkbox field="accepted" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_accepted" z="fLkJ95AC3zxKBMUrXUVRJYy6kp0="/>
+        <field:input field="initialFeedback" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_initialFeedback" required="true" z="TTz6uvzwRgtLfUe3lqlVaP1Syh0="/>
+        <field:input field="results" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_results" z="Tms9MFwzkssBtOVzF6BU/maB7OA="/>
+        <field:input field="progress" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_progress" z="wNqraREPtmKrtcQHhd7PJVldMe0="/>
+        <field:select field="city" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_city" itemValue="id" items="${citys}" path="/cities" required="true" z="NN/gBF3fLtyQ69TtsIVch7BUj1E="/>
+        <field:select field="volunteers" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_volunteers" itemValue="id" items="${volunteerapplications}" multiple="true" path="/volunteerapplications" z="z/zkvNHyKubUjn+0pu0NumMpUtE="/>
+    </form:update>
+</div>

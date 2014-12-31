@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ro_fundatiacomunitarabucuresti_volunteer_domain_Skill" modelAttribute="skill" path="/skills" versionField="Version" z="gbb64x7sHnFlNu6rKyI1swpr/oM=">
+        <field:input field="name" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Skill_name" required="true" z="8sWRmVF0gid+2J3BwzaYox747U4="/>
+    </form:update>
+</div>

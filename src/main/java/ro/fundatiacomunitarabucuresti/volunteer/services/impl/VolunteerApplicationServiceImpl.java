@@ -1,0 +1,5 @@
+package ro.fundatiacomunitarabucuresti.volunteer.services.impl;
+import ro.fundatiacomunitarabucuresti.volunteer.services.VolunteerApplicationService;
+
+public class VolunteerApplicationServiceImpl implements VolunteerApplicationService {
+}

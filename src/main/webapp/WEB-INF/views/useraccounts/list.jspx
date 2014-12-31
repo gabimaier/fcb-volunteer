@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount" items="${useraccounts}" z="lCs7HYoNMz6YZ0Pt2crJXi6+nLw=">
+        <table:table data="${useraccounts}" id="l_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount" path="/useraccounts" z="11OiTeTGDqQAGxRRDXBN5PcrD0o=">
+            <table:column id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_userName" property="userName" z="ABKf76okNfNQ488HzUX/r8xukdk="/>
+            <table:column id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_password" property="password" z="Ijo4MKAoo08Cxu2EAbrXM33dki4="/>
+            <table:column id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_firstName" property="firstName" z="BgshckUsg/RSG/k00yb6YTCoaxE="/>
+            <table:column id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_lastName" property="lastName" z="NO2MUAc0Q7xz0Q8i5hU/HEX6RyA="/>
+            <table:column id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_phone" property="phone" z="SWvUEW2KLwStt2MT5OfrM2ysVnY="/>
+            <table:column id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_email" property="email" z="m741hYKAbfQB4b3fNfy42A8nFBw="/>
+        </table:table>
+    </page:list>
+</div>

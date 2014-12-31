@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ro_fundatiacomunitarabucuresti_volunteer_domain_Project" object="${project}" path="/projects" z="bWQgtYzzaNfeF74rj0CSkqpSrqg=">
+        <field:display field="organization" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_organization" object="${project}" z="JXPcdpaKjqfzr6aPFDkzn3jszQo="/>
+        <field:display field="title" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_title" object="${project}" z="BPkDcfxxmG5me0LOuEwKYEk63ws="/>
+        <field:display field="description" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_description" object="${project}" z="geTu7ibrhs1AXkrRI2uGnqOiNvw="/>
+        <field:display field="tags" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_tags" object="${project}" z="A5HBI8I/nFF1Tk9RKLjCWH2yuZs="/>
+        <field:display field="requiredSkills" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_requiredSkills" object="${project}" z="vwU3P1J+7lR0UxPBFUV6ZhaKFL8="/>
+        <field:display date="true" dateTimePattern="${project_startdate_date_format}" field="startDate" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_startDate" object="${project}" z="18AgMTTnYqVBiGP7k/aA3m5ptYE="/>
+        <field:display field="accepted" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_accepted" object="${project}" z="O6Bq8wLjeFPiLppKJOzr61daX0I="/>
+        <field:display field="initialFeedback" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_initialFeedback" object="${project}" z="8JYOuem/W34al/Kn0xyZ73CE+Do="/>
+        <field:display field="results" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_results" object="${project}" z="podIEMOXWO3OGoQ0affAuWE20UE="/>
+        <field:display field="progress" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_progress" object="${project}" z="ItciI1WxSXKOcKuxB/K34U9yBQQ="/>
+        <field:display field="city" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_city" object="${project}" z="bAYc+QxuMKAMkwJIT/yPyEPp4EM="/>
+        <field:display field="volunteers" id="s_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_volunteers" object="${project}" z="vpXLGn+nUMb8EHZvmhW9BXDlRgw="/>
+    </page:show>
+</div>
