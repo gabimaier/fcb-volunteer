@@ -11,10 +11,6 @@
             <menu:item id="i_city_new" messageCode="global_menu_new" url="/cities?form" z="ALvexInNJV04umr0v6O5Lb5BiXI="/>
             <menu:item id="i_city_list" messageCode="global_menu_list" url="/cities?page=1&amp;size=${empty param.size ? 10 : param.size}" z="eCMIDEtkupGCPUtv6TKBGfxsOaQ="/>
         </menu:category>
-        <menu:category id="c_useraccount" z="Yb8cyPB5AwOfYXCcrEpGXNT9C+k=">
-            <menu:item id="i_useraccount_new" messageCode="global_menu_new" url="/useraccounts?form" z="dm6iErpLQmgISoPCTS3yLiH8XFA="/>
-            <menu:item id="i_useraccount_list" messageCode="global_menu_list" url="/useraccounts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="nijRCp2PPYuD2D3D7hljcdDK4vs="/>
-        </menu:category>
         <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
             <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
             <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
@@ -32,9 +28,9 @@
             <menu:item id="i_tag_list" messageCode="global_menu_list" url="/tags?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HsTcxZ80PNENgslZ1+b/pv8MYug="/>
         </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
-            <menu:item id="i_controller__volunteersindex_id" messageCode="global_generic" url="/volunteers/index" z="4JwhsJuCvpFnXfb+J3zH+k0Vq20="/>
-            <menu:item id="i_controller__organizationsindex_id" messageCode="global_generic" url="/organizations/index" z="Ce70TN3qToP8gA3n7QtKcR7TWHY="/>
-            <menu:item id="i_controller__facilitatorsindex_id" messageCode="global_generic" url="/facilitators/index" z="lYD829Og2theju6aEzy2j+ear5k="/>
+            <menu:item id="i_controller__volunteersindex_id" messageCode="global_menu_new" url="/volunteers?form" z="4JwhsJuCvpFnXfb+J3zH+k0Vq20="/>
+            <menu:item id="i_controller__organizationsindex_id" messageCode="global_menu_new" url="/organizations?form" z="Ce70TN3qToP8gA3n7QtKcR7TWHY="/>
+            <menu:item id="i_controller__facilitatorsindex_id" messageCode="global_menu_new" url="/facilitators?form" z="lYD829Og2theju6aEzy2j+ear5k="/>
         </menu:category>
     </menu:menu>
 </div>

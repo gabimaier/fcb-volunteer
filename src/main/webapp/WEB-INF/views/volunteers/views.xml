@@ -4,4 +4,7 @@
     <definition extends="default" name="volunteers/index">
         <put-attribute name="body" value="/WEB-INF/views/volunteers/index.jspx"/>
     </definition>
+    <definition extends="default" name="volunteers/create">
+        <put-attribute name="body" value="/WEB-INF/views/volunteers/create.jspx"/>
+    </definition>
 </tiles-definitions>
