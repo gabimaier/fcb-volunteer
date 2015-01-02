@@ -4,6 +4,7 @@ import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
 import ro.fundatiacomunitarabucuresti.volunteer.domain.dictionaries.Roles;
 
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
@@ -16,6 +17,7 @@ public class UserRole {
      */
     @NotNull
     @ManyToOne
+    @JoinColumn(referencedColumnName = "userName", name = "user_name")
     private UserAccount userAccount;
 
     /**
