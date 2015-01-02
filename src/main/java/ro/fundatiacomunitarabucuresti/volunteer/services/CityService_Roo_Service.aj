@@ -12,7 +12,6 @@ privileged aspect CityService_Roo_Service {
     public abstract long CityService.countAllCitys();    
     public abstract void CityService.deleteCity(City city);    
     public abstract City CityService.findCity(Long id);    
-    public abstract List<City> CityService.findAllCitys();    
     public abstract List<City> CityService.findCityEntries(int firstResult, int maxResults);    
     public abstract void CityService.saveCity(City city);    
     public abstract City CityService.updateCity(City city);    

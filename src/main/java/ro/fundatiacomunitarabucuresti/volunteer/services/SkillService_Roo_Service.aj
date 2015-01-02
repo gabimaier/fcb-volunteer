@@ -12,7 +12,6 @@ privileged aspect SkillService_Roo_Service {
     public abstract long SkillService.countAllSkills();    
     public abstract void SkillService.deleteSkill(Skill skill);    
     public abstract Skill SkillService.findSkill(Long id);    
-    public abstract List<Skill> SkillService.findAllSkills();    
     public abstract List<Skill> SkillService.findSkillEntries(int firstResult, int maxResults);    
     public abstract void SkillService.saveSkill(Skill skill);    
     public abstract Skill SkillService.updateSkill(Skill skill);    

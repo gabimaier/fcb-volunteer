@@ -28,9 +28,9 @@
             <menu:item id="i_tag_list" messageCode="global_menu_list" url="/tags?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HsTcxZ80PNENgslZ1+b/pv8MYug="/>
         </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
-            <menu:item id="i_controller__volunteersindex_id" messageCode="global_menu_new" url="/volunteers?form" z="4JwhsJuCvpFnXfb+J3zH+k0Vq20="/>
-            <menu:item id="i_controller__organizationsindex_id" messageCode="global_menu_new" url="/organizations?form" z="Ce70TN3qToP8gA3n7QtKcR7TWHY="/>
-            <menu:item id="i_controller__facilitatorsindex_id" messageCode="global_menu_new" url="/facilitators?form" z="lYD829Og2theju6aEzy2j+ear5k="/>
+            <menu:item id="i_controller__volunteersindex_id" messageCode="global_menu_new" url="/volunteers?form" z="user-managed"/>
+            <menu:item id="i_controller__organizationsindex_id" messageCode="global_menu_new" url="/organizations?form" z="user-managed"/>
+            <menu:item id="i_controller__facilitatorsindex_id" messageCode="global_menu_new" url="/facilitators?form" z="user-managed"/>
         </menu:category>
     </menu:menu>
 </div>

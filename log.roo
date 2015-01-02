@@ -72,3 +72,8 @@ exit
 web mvc controller --class ~.web.VolunteerController --preferredMapping volunteers
 web mvc controller --class ~.web.OrganizationController --preferredMapping organizations
 web mvc controller --class ~.web.FacilitatorController --preferredMapping facilitators
+exit
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2014-12-31 21:22:43
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-01-02 11:48:56
+perform tests
+test stub --class ~.services.CityService

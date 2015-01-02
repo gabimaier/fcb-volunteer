@@ -14,6 +14,5 @@ privileged aspect VolunteerService_Roo_Service {
     public abstract Volunteer VolunteerService.findVolunteer(Long id);    
     public abstract List<Volunteer> VolunteerService.findAllVolunteers();    
     public abstract List<Volunteer> VolunteerService.findVolunteerEntries(int firstResult, int maxResults);    
-    public abstract void VolunteerService.saveVolunteer(Volunteer volunteer);    
     public abstract Volunteer VolunteerService.updateVolunteer(Volunteer volunteer);    
 }
