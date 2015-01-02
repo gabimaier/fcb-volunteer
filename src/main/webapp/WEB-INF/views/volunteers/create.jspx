@@ -14,7 +14,7 @@
         <field:select field="skills" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Volunteer_skills" itemValue="id" items="${skills}" multiple="true" path="/skills" required="true" z="ZYf5kI24C1H0dFiqKVdyY93LPeI="/>
         <field:select field="expertSkills" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_Volunteer_expertSkills" itemValue="id" items="${skills}" multiple="true" path="/skills" required="true" z="ZYf5kI24C1H0dFiqKVdyY93LPeI="/>
 
-        <field:checkbox field="enabled" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_enabled" z="bvya4tEre+viEL77IlaGRc0YVYk="/>
+        <!--field:checkbox field="enabled" id="c_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount_enabled" z="bvya4tEre+viEL77IlaGRc0YVYk="/-->
     </form:create>
     <!--form:dependency dependencies="${dependencies}" id="d_ro_fundatiacomunitarabucuresti_volunteer_domain_UserAccount" render="${not empty dependencies}" z="dE66tZe+m5H0W28ISKOhyto8KyY="/-->
 </div>
