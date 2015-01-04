@@ -18,15 +18,6 @@ public class VolunteerController {
     @Autowired
     private UserAccountViewService userAccountViewService;
 
-//    @RequestMapping(method = RequestMethod.POST, value = "{id}")
-//    public void post(@PathVariable Long id, ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) {
-//    }
-
-//    @RequestMapping
-//    public String index() {
-//        return "volunteers/index";
-//    }
-
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String create(@Valid Volunteer volunteer, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {

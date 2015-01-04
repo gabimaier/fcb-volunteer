@@ -27,10 +27,13 @@ public class UserAccountViewServiceImpl implements UserAccountViewService {
 
     @Override
     public void populateEditForm(Model uiModel, UserAccount userAccount) {
-        uiModel.addAttribute("volunteer", userAccount);
         if(userAccount instanceof Volunteer) {
+            uiModel.addAttribute("volunteer", userAccount);
             uiModel.addAttribute("citys", cityService.findAllCitys());
             uiModel.addAttribute("skills", skillService.findAllSkills());
+        }
+        else if(userAccount instanceof Organization){
+            uiModel.addAttribute("volunteer", userAccount);
         }
     }
 
