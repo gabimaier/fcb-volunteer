@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.persistence.ManyToOne;
 
 @RooToString
-@RooJpaActiveRecord(inheritanceType = "JOINED")
+@RooJpaActiveRecord(inheritanceType = "JOINED", table = "user_accounts")
 public abstract class UserAccount {
 
     /**

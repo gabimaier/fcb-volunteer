@@ -14,6 +14,5 @@ privileged aspect FacilitatorService_Roo_Service {
     public abstract Facilitator FacilitatorService.findFacilitator(Long id);    
     public abstract List<Facilitator> FacilitatorService.findAllFacilitators();    
     public abstract List<Facilitator> FacilitatorService.findFacilitatorEntries(int firstResult, int maxResults);    
-    public abstract void FacilitatorService.saveFacilitator(Facilitator facilitator);    
     public abstract Facilitator FacilitatorService.updateFacilitator(Facilitator facilitator);    
 }

@@ -56,7 +56,7 @@ privileged aspect VolunteerDataOnDemand_Roo_DataOnDemand {
     }
     
     public void VolunteerDataOnDemand.setEnabled(Volunteer obj, int index) {
-        Boolean enabled = Boolean.TRUE;
+        Boolean enabled = Boolean.FALSE;
         obj.setEnabled(enabled);
     }
     

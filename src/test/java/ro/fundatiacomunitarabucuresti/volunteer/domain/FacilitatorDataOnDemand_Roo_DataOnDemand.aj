@@ -56,7 +56,7 @@ privileged aspect FacilitatorDataOnDemand_Roo_DataOnDemand {
     }
     
     public void FacilitatorDataOnDemand.setEnabled(Facilitator obj, int index) {
-        Boolean enabled = Boolean.TRUE;
+        Boolean enabled = Boolean.FALSE;
         obj.setEnabled(enabled);
     }
     

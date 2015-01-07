@@ -14,6 +14,5 @@ privileged aspect OrganizationService_Roo_Service {
     public abstract Organization OrganizationService.findOrganization(Long id);    
     public abstract List<Organization> OrganizationService.findAllOrganizations();    
     public abstract List<Organization> OrganizationService.findOrganizationEntries(int firstResult, int maxResults);    
-    public abstract void OrganizationService.saveOrganization(Organization organization);    
     public abstract Organization OrganizationService.updateOrganization(Organization organization);    
 }

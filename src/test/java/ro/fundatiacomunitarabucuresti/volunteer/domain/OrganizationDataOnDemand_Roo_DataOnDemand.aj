@@ -58,7 +58,7 @@ privileged aspect OrganizationDataOnDemand_Roo_DataOnDemand {
     }
     
     public void OrganizationDataOnDemand.setEnabled(Organization obj, int index) {
-        Boolean enabled = Boolean.TRUE;
+        Boolean enabled = Boolean.FALSE;
         obj.setEnabled(enabled);
     }
     

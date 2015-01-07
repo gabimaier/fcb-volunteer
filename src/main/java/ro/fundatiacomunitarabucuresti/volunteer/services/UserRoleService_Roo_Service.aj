@@ -14,6 +14,5 @@ privileged aspect UserRoleService_Roo_Service {
     public abstract UserRole UserRoleService.findUserRole(Long id);    
     public abstract List<UserRole> UserRoleService.findAllUserRoles();    
     public abstract List<UserRole> UserRoleService.findUserRoleEntries(int firstResult, int maxResults);    
-    public abstract void UserRoleService.saveUserRole(UserRole userRole);    
     public abstract UserRole UserRoleService.updateUserRole(UserRole userRole);    
 }

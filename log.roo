@@ -80,3 +80,5 @@ test stub --class ~.services.CityService
 hint service
 help service
 service type --interface ~.viewServices.UserAccountViewService --class ~.viewServices.impl.UserAccountViewServiceImpl
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-01-07 21:21:55
+security setup

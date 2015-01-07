@@ -10,12 +10,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 import javax.persistence.Version;
 import ro.fundatiacomunitarabucuresti.volunteer.domain.UserAccount;
 
 privileged aspect UserAccount_Roo_Jpa_Entity {
     
     declare @type: UserAccount: @Entity;
+    
+    declare @type: UserAccount: @Table(name = "user_accounts");
     
     declare @type: UserAccount: @Inheritance(strategy = InheritanceType.JOINED);
     

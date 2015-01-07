@@ -1,0 +1,20 @@
+1. add regexp validation to userAccount.email
+2. organization.user: not null
+3. organization.user -> set
+4. project.description, initialFeedback, results, progress -> sa contina poze/prezentari
+5. project.initialFeedback: scos not null
+
+6. subclase user
+7. mecanism stare aplicatie
+8. security, password encription: plaintext -> md5
+??? expert / potential voluntar / voluntari / potential expert
+
+100. spring security db
+101. customizat pg login: + register... -> forms
+201. customizat form new project
+205. lista proiecte noi
+202. org: ascundere proiecte neacceptate alte org
+203. org: crud doar pe proi sale neacceptate (de anul asta)
+204?. vol: ascundere proiecte neacceptate
+206. med: notificare proi nou
+207: med: accepta un proiect
