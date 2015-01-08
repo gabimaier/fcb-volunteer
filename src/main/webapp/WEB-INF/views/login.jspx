@@ -12,11 +12,24 @@
         </p>
       </div>
     </c:if>
-    <c:if test="${empty param.login_error}">
+
+    <div style="padding-bottom: 1cm">
       <p>
-        <spring:message code="security_login_message" />
+        <spring:message code="security_register_volunteer" />
+        <c:out value=" "/>
+        <a href="volunteers?form">
+          <spring:message code="security_register_message" />
+        </a>
       </p>
-    </c:if>
+      <p>
+        <spring:message code="security_register_organization" />
+        <c:out value=" "/>
+        <a href="organizations?form">
+          <spring:message code="security_register_message" />
+        </a>
+      </p>
+    </div>
+
     <spring:url value="/resources/j_spring_security_check" var="form_url" />
     <form name="f" action="${fn:escapeXml(form_url)}" method="POST">
       <div>
@@ -49,7 +62,7 @@
       <br />
       <div class="submit">
         <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
-        <spring:message code="button_submit" var="submit_label" htmlEscape="false" />
+        <spring:message code="button_login" var="submit_label" htmlEscape="false" />
         <input id="proceed" type="submit" value="${fn:escapeXml(submit_label)}" />
         <spring:message code="button_reset" var="reset_label" htmlEscape="false" />
         <input id="reset" type="reset" value="${fn:escapeXml(reset_label)}" />
