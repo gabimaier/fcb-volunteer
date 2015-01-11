@@ -4,13 +4,10 @@
 4. project.description, initialFeedback, results, progress -> sa contina poze/prezentari
 5. project.initialFeedback: scos not null
 
-6. subclase user
 7. mecanism stare aplicatie
 8. security, password encription: plaintext -> md5
 ??? expert / potential voluntar / voluntari / potential expert
 
-100. spring security db
-101. customizat pg login: + register... -> forms
 201. customizat form new project
 205. lista proiecte noi
 202. org: ascundere proiecte neacceptate alte org
@@ -18,3 +15,41 @@
 204?. vol: ascundere proiecte neacceptate
 206. med: notificare proi nou
 207: med: accepta un proiect
+
+
+
+QUERIES
+=======
+
+Phase 0. Always
+---------------
+query: projects accepted from previous events
+
+Phase 1. Project proposal
+-------------------------
+
+Projects:
+    query: proposed by current organization for next event, not yet accepted
+    visibility: O/crud
+
+    query: proposed for next event, not yet accepted
+    visibility: F/crud
+
+    query: proposed by current organization for next event, accepted
+    visibility: O/r, F/crud
+
+    query: proposed for next event, accepted
+    visibility: O/r, V/r+apply, F/crud
+
+Project applications:
+    query: for accepted projects proposed by current organization
+    visiblity: O/r, F/r
+
+    query: for accepted projects for next event, by accepted
+    visiblity: O/r, F/crud
+
+    query: for accepted projects, accepted
+    visiblity: O/r, V/r, F/crud
+
+    query: for accepted projects, accepted, by current volunteer
+    visiblity: V/rd

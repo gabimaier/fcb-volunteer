@@ -20,7 +20,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(table = "projects")
+@RooJpaActiveRecord(table = "projects", finders = { "findProjectsByOrganizationAndStartDateEqualsAndAcceptedNot" })
 public class Project {
 
     /**

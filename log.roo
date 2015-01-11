@@ -85,3 +85,34 @@ security setup
 exit
 // Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-01-07 22:12:43
 // Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-01-08 21:04:45
+exit
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-01-08 22:21:52
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-01-10 19:37:09
+focus --class ~.domain.Project
+finder list 
+exit
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-01-10 19:54:19
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-01-11 14:13:49
+focus --class ~.domain.Project
+finder list 
+hint finder list
+help finder list
+finder list --depth 3 --filter organization
+finder list --depth 3 --filter organization,startDate,accepted
+finder list --depth 3 --filter organizationAndStartDateAndAccepted
+finder list --filter organizationAndStartDateAndAccepted
+finder list --depth 3 --filter organization
+finder list --depth 3 --filter organizationAnd
+finder list --depth 3 --filter organizationAndStartDate
+finder list --depth 3 --filter organizationAndStartDateEquals
+finder list --depth 3 --filter organizationAndStartDateEqualsAndAccepted
+finder add findProjectsByOrganizationAndStartDateEqualsAndAcceptedNot
+exit
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-01-11 15:21:59
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-01-11 15:22:30
+help finder add
+finder add --class ~.web.ProjectController --finderName findProjectsByOrganizationAndStartDateEqualsAndAcceptedNot
+help web mvc finder
+help web mvc finder add
+finder add findProjectsByOrganizationAndStartDateEqualsAndAcceptedNot --class ~.domain.Project
+help web mvc finder add
