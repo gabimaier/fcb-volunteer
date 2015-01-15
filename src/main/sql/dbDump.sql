@@ -27,7 +27,7 @@ CREATE TABLE `cities` (
   `name` varchar(255) NOT NULL,
   `version` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `cities` (
 
 LOCK TABLES `cities` WRITE;
 /*!40000 ALTER TABLE `cities` DISABLE KEYS */;
-INSERT INTO `cities` VALUES (1,'Bucuresti',0),(2,'Amsterdaam',0),(3,'London',0);
+INSERT INTO `cities` VALUES (1,'bucuresti',0);
 /*!40000 ALTER TABLE `cities` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,7 +50,7 @@ DROP TABLE IF EXISTS `facilitators`;
 CREATE TABLE `facilitators` (
   `id` bigint(20) NOT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `FK_h2i87qmhkpd3s4vndrjide8g9` FOREIGN KEY (`id`) REFERENCES `user_account` (`id`)
+  CONSTRAINT `FK_h2i87qmhkpd3s4vndrjide8g9` FOREIGN KEY (`id`) REFERENCES `user_accounts` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -76,7 +76,7 @@ CREATE TABLE `organizations` (
   `id` bigint(20) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_p9pbw3flq9hkay8hdx3ypsldy` (`name`),
-  CONSTRAINT `FK_6y5owvxkgm8r57ddyq7qcv8br` FOREIGN KEY (`id`) REFERENCES `user_account` (`id`)
+  CONSTRAINT `FK_6y5owvxkgm8r57ddyq7qcv8br` FOREIGN KEY (`id`) REFERENCES `user_accounts` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -86,6 +86,7 @@ CREATE TABLE `organizations` (
 
 LOCK TABLES `organizations` WRITE;
 /*!40000 ALTER TABLE `organizations` DISABLE KEYS */;
+INSERT INTO `organizations` VALUES ('fundatia mea','myw.ro',3),('alta fundatia','sdsd.ro',4);
 /*!40000 ALTER TABLE `organizations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,8 +165,8 @@ CREATE TABLE `projects_tags` (
   `tags` bigint(20) NOT NULL,
   PRIMARY KEY (`projects`,`tags`),
   KEY `FK_4l39yl8chhaliy8krwtxs8mgv` (`tags`),
-  CONSTRAINT `FK_dqlohfs6cg9vxqock4sh0qpso` FOREIGN KEY (`projects`) REFERENCES `projects` (`id`),
-  CONSTRAINT `FK_4l39yl8chhaliy8krwtxs8mgv` FOREIGN KEY (`tags`) REFERENCES `tags` (`id`)
+  CONSTRAINT `FK_4l39yl8chhaliy8krwtxs8mgv` FOREIGN KEY (`tags`) REFERENCES `tags` (`id`),
+  CONSTRAINT `FK_dqlohfs6cg9vxqock4sh0qpso` FOREIGN KEY (`projects`) REFERENCES `projects` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -190,8 +191,8 @@ CREATE TABLE `projects_volunteers` (
   `volunteers` bigint(20) NOT NULL,
   PRIMARY KEY (`projects`,`volunteers`),
   KEY `FK_bvfa6d4r5ikkmbu78slt4bme5` (`volunteers`),
-  CONSTRAINT `FK_dpilmplq9m9dd85i6c528d4vs` FOREIGN KEY (`projects`) REFERENCES `projects` (`id`),
-  CONSTRAINT `FK_bvfa6d4r5ikkmbu78slt4bme5` FOREIGN KEY (`volunteers`) REFERENCES `volunteer_applications` (`id`)
+  CONSTRAINT `FK_bvfa6d4r5ikkmbu78slt4bme5` FOREIGN KEY (`volunteers`) REFERENCES `volunteer_applications` (`id`),
+  CONSTRAINT `FK_dpilmplq9m9dd85i6c528d4vs` FOREIGN KEY (`projects`) REFERENCES `projects` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -216,7 +217,7 @@ CREATE TABLE `skills` (
   `name` varchar(255) NOT NULL,
   `version` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,7 +226,7 @@ CREATE TABLE `skills` (
 
 LOCK TABLES `skills` WRITE;
 /*!40000 ALTER TABLE `skills` DISABLE KEYS */;
-INSERT INTO `skills` VALUES (1,'marketing',0),(2,'PR',0),(3,'graphical design',0),(4,'programare',0),(5,'project management',0);
+INSERT INTO `skills` VALUES (1,'pr',0),(2,'marketing',0);
 /*!40000 ALTER TABLE `skills` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,7 +242,7 @@ CREATE TABLE `tags` (
   `name` varchar(255) NOT NULL,
   `version` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -250,18 +251,18 @@ CREATE TABLE `tags` (
 
 LOCK TABLES `tags` WRITE;
 /*!40000 ALTER TABLE `tags` DISABLE KEYS */;
-INSERT INTO `tags` VALUES (1,'batrani',0),(2,'orfani',0),(3,'dizabilitati',0);
+INSERT INTO `tags` VALUES (1,'tag1',0),(2,'tag2',0);
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `user_account`
+-- Table structure for table `user_accounts`
 --
 
-DROP TABLE IF EXISTS `user_account`;
+DROP TABLE IF EXISTS `user_accounts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_account` (
+CREATE TABLE `user_accounts` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   `enabled` bit(1) NOT NULL,
@@ -273,19 +274,20 @@ CREATE TABLE `user_account` (
   `version` int(11) DEFAULT NULL,
   `city` bigint(20) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_n581kgbdmb1ruhd047l51wn0a` (`user_name`),
-  KEY `FK_r3b93dkao46hr98fql9erx6tq` (`city`),
-  CONSTRAINT `FK_r3b93dkao46hr98fql9erx6tq` FOREIGN KEY (`city`) REFERENCES `cities` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  UNIQUE KEY `UK_1u4s1u6ctndl9gsgnuvcw87xh` (`user_name`),
+  KEY `FK_605jkxpbrufc49661633q0w8a` (`city`),
+  CONSTRAINT `FK_605jkxpbrufc49661633q0w8a` FOREIGN KEY (`city`) REFERENCES `cities` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user_account`
+-- Dumping data for table `user_accounts`
 --
 
-LOCK TABLES `user_account` WRITE;
-/*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
+LOCK TABLES `user_accounts` WRITE;
+/*!40000 ALTER TABLE `user_accounts` DISABLE KEYS */;
+INSERT INTO `user_accounts` VALUES (1,'gm@dgdg.ro','','volun','teer','p','1234','vol1',0,1),(2,'gm@gd.ro','','orga','nization','p','887987','org1',0,1),(3,'ddffd@rer.ro','','ion','ionescu','p','1232424','org3',0,1),(4,'fdfdf@rere.ro','','or','ganizatie','p','12323','org4',0,1);
+/*!40000 ALTER TABLE `user_accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -299,11 +301,11 @@ CREATE TABLE `user_roles` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `role_name` varchar(255) NOT NULL,
   `version` int(11) DEFAULT NULL,
-  `user_account` bigint(20) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK_p48cn30k34to9qbcqusrr83lq` (`user_account`),
-  CONSTRAINT `FK_p48cn30k34to9qbcqusrr83lq` FOREIGN KEY (`user_account`) REFERENCES `user_account` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `FK_kmg4k9wkf9lbwdbej4wqu2ppk` (`user_name`),
+  CONSTRAINT `FK_kmg4k9wkf9lbwdbej4wqu2ppk` FOREIGN KEY (`user_name`) REFERENCES `user_accounts` (`user_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -312,6 +314,7 @@ CREATE TABLE `user_roles` (
 
 LOCK TABLES `user_roles` WRITE;
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
+INSERT INTO `user_roles` VALUES (1,'VOLUNTEER',0,'vol1'),(2,'VOLUNTEER',0,'org1'),(3,'ORGANIZATION',0,'org3'),(4,'ORGANIZATION',0,'org4');
 /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -331,8 +334,8 @@ CREATE TABLE `volunteer_applications` (
   PRIMARY KEY (`id`),
   KEY `FK_3pcka4x4iqftojie540abdtxx` (`project`),
   KEY `FK_ry63ax1vbkaowo07w34ulhv4j` (`volunteer`),
-  CONSTRAINT `FK_ry63ax1vbkaowo07w34ulhv4j` FOREIGN KEY (`volunteer`) REFERENCES `volunteers` (`id`),
-  CONSTRAINT `FK_3pcka4x4iqftojie540abdtxx` FOREIGN KEY (`project`) REFERENCES `projects` (`id`)
+  CONSTRAINT `FK_3pcka4x4iqftojie540abdtxx` FOREIGN KEY (`project`) REFERENCES `projects` (`id`),
+  CONSTRAINT `FK_ry63ax1vbkaowo07w34ulhv4j` FOREIGN KEY (`volunteer`) REFERENCES `volunteers` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -355,7 +358,7 @@ DROP TABLE IF EXISTS `volunteers`;
 CREATE TABLE `volunteers` (
   `id` bigint(20) NOT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `FK_lkioguhh67ol4s3ny13e7g11u` FOREIGN KEY (`id`) REFERENCES `user_account` (`id`)
+  CONSTRAINT `FK_lkioguhh67ol4s3ny13e7g11u` FOREIGN KEY (`id`) REFERENCES `user_accounts` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -365,6 +368,7 @@ CREATE TABLE `volunteers` (
 
 LOCK TABLES `volunteers` WRITE;
 /*!40000 ALTER TABLE `volunteers` DISABLE KEYS */;
+INSERT INTO `volunteers` VALUES (1),(2);
 /*!40000 ALTER TABLE `volunteers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -391,6 +395,7 @@ CREATE TABLE `volunteers_expert_skills` (
 
 LOCK TABLES `volunteers_expert_skills` WRITE;
 /*!40000 ALTER TABLE `volunteers_expert_skills` DISABLE KEYS */;
+INSERT INTO `volunteers_expert_skills` VALUES (1,1),(2,1);
 /*!40000 ALTER TABLE `volunteers_expert_skills` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -406,8 +411,8 @@ CREATE TABLE `volunteers_skills` (
   `skills` bigint(20) NOT NULL,
   PRIMARY KEY (`volunteers`,`skills`),
   KEY `FK_jwt8p6ax7xyb0l7kjpict5808` (`skills`),
-  CONSTRAINT `FK_p0wt95reyw9mj8yga8p0uois6` FOREIGN KEY (`volunteers`) REFERENCES `volunteers` (`id`),
-  CONSTRAINT `FK_jwt8p6ax7xyb0l7kjpict5808` FOREIGN KEY (`skills`) REFERENCES `skills` (`id`)
+  CONSTRAINT `FK_jwt8p6ax7xyb0l7kjpict5808` FOREIGN KEY (`skills`) REFERENCES `skills` (`id`),
+  CONSTRAINT `FK_p0wt95reyw9mj8yga8p0uois6` FOREIGN KEY (`volunteers`) REFERENCES `volunteers` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -417,6 +422,7 @@ CREATE TABLE `volunteers_skills` (
 
 LOCK TABLES `volunteers_skills` WRITE;
 /*!40000 ALTER TABLE `volunteers_skills` DISABLE KEYS */;
+INSERT INTO `volunteers_skills` VALUES (1,2),(2,2);
 /*!40000 ALTER TABLE `volunteers_skills` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -429,4 +435,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-31 20:29:42
+-- Dump completed on 2015-01-15 22:33:04
