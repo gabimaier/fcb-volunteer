@@ -33,7 +33,8 @@ public class UserAccountViewServiceImpl implements UserAccountViewService {
             uiModel.addAttribute("skills", skillService.findAllSkills());
         }
         else if(userAccount instanceof Organization){
-            uiModel.addAttribute("volunteer", userAccount);
+            uiModel.addAttribute("organization", userAccount);
+            uiModel.addAttribute("citys", cityService.findAllCitys());
         }
     }
 

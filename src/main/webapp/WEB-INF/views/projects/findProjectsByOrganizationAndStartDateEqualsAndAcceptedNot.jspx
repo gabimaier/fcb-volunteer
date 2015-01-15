@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByOrganizationAndStartDateEqualsAndAcceptedNot" id="ff_ro_fundatiacomunitarabucuresti_volunteer_domain_Project" path="/projects" z="/Y/qR8eM0D/gmmasega/45YQOkU=">
+        <field:select disableFormBinding="true" field="organization" id="f_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_organization" itemValue="id" items="${organizations}" path="/organizations" required="true" z="A1LAqkuP4V6LmqVFA7AYJokyAIA="/>
+        <field:datetime dateTimePattern="${project_startdate_date_format}" disableFormBinding="true" field="startDate" id="f_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_startDate" required="true" z="MFZoZR3Mp9j0b+h609/kReTKDow="/>
+        <field:checkbox disableFormBinding="true" field="accepted" id="f_ro_fundatiacomunitarabucuresti_volunteer_domain_Project_accepted" z="0GwXRLYQSaSPIWcSuqU2bR8YHNQ="/>
+    </form:find>
+</div>

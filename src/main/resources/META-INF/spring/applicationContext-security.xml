@@ -13,6 +13,8 @@
         <intercept-url pattern="^/login$" access="permitAll" />
         <intercept-url method="GET" pattern="^/volunteers\?form$" access="permitAll" />
         <intercept-url method="POST" pattern="^/volunteers$" access="permitAll" />
+        <intercept-url method="GET" pattern="^/organizations\?form$" access="permitAll" />
+        <intercept-url method="POST" pattern="^/organizations$" access="permitAll" />
         <intercept-url pattern="^/.*$" access="isAuthenticated()" />
     </http>
     <!-- Configure Authentication mechanism -->
