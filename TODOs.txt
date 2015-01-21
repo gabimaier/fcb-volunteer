@@ -53,3 +53,59 @@ Project applications:
 
     query: for accepted projects, accepted, by current volunteer
     visiblity: V/rd
+
+=====
+UI:
+=====
+
+Phase 1. Project proposal
+=========================
+
+Org
+---
+
+*our org*
+- edit my account
+- propose project
+- pending proposals
+- accepted proposals
+- volunteer applications for our accepted proposals
+
+*public space*
+- other accepted proposals
+- accepted volunteers
+
+*previous events*
+- projects
+
+
+Volunteers
+----------
+
+*my stuff*
+- edit my account
+- pending applications
+- accepted applications
+
+*next event*
+- open project proposals
+- all projects
+- accepted volunteers
+- participating organizations
+
+*previous events*
+- projects
+
+
+Facilitator
+-----------
+*to be judged*
+- proposed projects
+- volunteer applications
+
+*accepted*
+- proposed projects
+- volunteer applications
+
+*previous events*
+- projects
